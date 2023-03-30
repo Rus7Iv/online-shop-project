@@ -7,8 +7,28 @@ const GlobalStyle = createGlobalStyle`
         --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
         'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
         'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+
+        /* color */
+        --primary: #f1f1f1;
+        --secondary: rgb(0, 0, 0);
+        --tertiary: rgb(189, 155, 25);
     }
-    
+
+/* ============ Scrollbar ============ */
+    *::-webkit-scrollbar {
+    width: 10px;
+    }
+
+    *::-webkit-scrollbar-thumb {
+        background-color: var(--secondary);
+        border-radius: 14px;
+        border: 3px solid var(--primary);
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: var(--tertiary);
+    }
+/* ==================================== */
     * {
         box-sizing: border-box;
         padding: 0;
